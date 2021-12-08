@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import app from '../firebase'
+import app from './firebase'
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 export function AuthProvider({children}) {
