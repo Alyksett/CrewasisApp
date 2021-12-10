@@ -1,11 +1,11 @@
 const {Client} = require('pg')
 
 const client = new Client({
-    host: "localhost",
-    user: "postgres",
-    post: 5432,
-    password: "JyXptnt6bJlrLfO5KlaE_SyvmMScsSs6",
-    database: 'Crewasis Demo'
+    host: "kashin.db.elephantsql.com",
+    user: "prvhztbg",
+    post: 5433,
+    password: "eRSTmCc_lmjknyk4-nso7Hp2TtDZlx42",
+    database: 'prvhztbg'
 })
 
 client.connect();
