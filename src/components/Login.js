@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import {makeStyles} from '@material-ui/core/styles';
+import { Typography } from '@mui/material';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -28,7 +29,9 @@ const Login = () => {
 
   return (
     <div>
-      <h2>login</h2>
+      <Typography variant='h2'>
+        Login
+     </Typography>
       <form onSubmit={onSubmit}>
         <div className={classes.text_field}>
         <TextField
