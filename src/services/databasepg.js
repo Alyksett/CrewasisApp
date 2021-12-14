@@ -1,4 +1,7 @@
-const {Client} = require('pg')
+import {useAuth} from '../AuthContext.js';
+import pkg from 'pg';
+const {Client} = pkg;
+
 
 const client = new Client({
     host: "kashin.db.elephantsql.com",
@@ -10,6 +13,7 @@ const client = new Client({
 
 client.connect();
 
+
 client.query(`Select * from question`, (err, res) => {
      if(!err){
          console.log(res.rows)
@@ -19,6 +23,23 @@ client.query(`Select * from question`, (err, res) => {
      }
      client.end;
 })
+
+
+const { currentUser } = useAuth()
+
+// client.query(
+//     `Insert into user_table (userID, Username, Email)`,
+//     `Values(`+test+`)`, [currentUser.uid]
+// ), (err, res) =>{
+//     if(!err){
+//           console.log("Added", currentUser.uid)
+//       }
+//       else{
+//           console.log(err.message);
+//       }
+//       client.end;
+// }
+    
 
 
 
